@@ -1,0 +1,32 @@
+Script started on 2023-04-20 21:50:05+02:00 [TERM="xterm-256color" TTY="/dev/pts/1" COLUMNS="189" LINES="38"]
+[1m[7m%[27m[1m[0m                                                                                                                                                                                             ]2;shalltear@dainstudios:~/projects/devops_with_docker/exercises]1;..ker/exercises]7;file://dainstudios/home/shalltear/projects/devops_with_docker/exercises[0m[27m[24m[J[32mshalltear@dainstudios: [00m[34m/home/shalltear/projects/devops_with_docker/exercises [00m[01;34mgit:([31mmaster[34m) [33m✗[00m[00m[01;34m [00m
+[01;32m➜  [00m [K[?1h=[?2004hscriptsudo docker exec -it ubt bash[17Drun -d -it --rm --name ubt devopsdockeruh/simple-web-service:ubuntu[P[43C [44D[P[42C [43D[P[41C [42Dt devopsdockeruh/simple-web-service:ubuntu[41D[P[41C [42De devopsdockeruh/simple-web-service:ubuntu[41Dx devopsdockeruh/simple-web-service:ubuntu[41De devopsdockeruh/simple-web-service:ubuntu[41Dc devopsdockeruh/simple-web-service:ubuntu[41D[P[41C [42D1 devopsdockeruh/simple-web-service:ubuntu[41D. devopsdockeruh/simple-web-service:ubuntu[41D3 devopsdockeruh/simple-web-service:ubuntu[41D[?1l>[?2004l
+]2;sudo docker run -d -it --rm --name exe1.3 ]1;docker[sudo] password for shalltear: 
+628189527d2ae974270b40f911b898bf1995faaa30e0f7ccedd4c758d497610c
+[1m[7m%[27m[1m[0m                                                                                                                                                                                             ]2;shalltear@dainstudios:~/projects/devops_with_docker/exercises]1;..ker/exercises]7;file://dainstudios/home/shalltear/projects/devops_with_docker/exercises[0m[27m[24m[J[32mshalltear@dainstudios: [00m[34m/home/shalltear/projects/devops_with_docker/exercises [00m[01;34mgit:([31mmaster[34m) [33m✗[00m[00m[01;34m [00m
+[01;32m➜  [00m [K[?1h=[?2004hsudo docker run -d -it --rm --name exe1.3 devopsdockeruh/simple-web-service:ubuntu[82Dscript                                                                            [76Dsudo docker exec -it ubt bash[17Drun -d -it --rm --name ubt devopsdockeruh/simple-web-service:ubuntu[?2004l
+[1m[7m%[27m[1m[0m                                                                                                                                                                                             ]2;shalltear@dainstudios:~/projects/devops_with_docker/exercises]1;..ker/exercises]7;file://dainstudios/home/shalltear/projects/devops_with_docker/exercises[0m[27m[24m[J[32mshalltear@dainstudios: [00m[34m/home/shalltear/projects/devops_with_docker/exercises [00m[01;34mgit:([31mmaster[34m) [33m✗[00m[00m[01;34m [00m
+[01;31m➜ [27m [00m [K[?1h=[?2004hsudo docker run -d -it --rm --name exe1.3 devopsdockeruh/simple-web-service:ubuntu[82Dscript                                                                            [76Dsudo docker exec -it ubt bash[17Drun -d -it --rm --name ubt devopsdockeruh/simple-web-service:ubuntu[67Dexec -it 5245 /bin/dash                                            [44D[23Drun -d -it --rm --name ubt devopsdockeruh/simple-web-service:ubuntu[67Dexec -it ubt bash                                                  [50D[29Dscript                       [23Dsudo docker run -d -it --rm --name exe1.3 devopsdockeruh/simple-web-service:ubuntu[82Dscript                                                                            [76Dsudo docker run -d -it --rm --name exe1.3 devopsdockeruh/simple-web-service:ubuntu[82D                                                                                  [82Dsudo docker run -d -it --rm --name exe1.3 devopsdockeruh/simple-web-service:ubuntu[82Dscript                                                                            [76Dsudo docker exec -it ubt bash bash  bash  bash e bashx bashe bash1 bash. bash3 bash[?1l>[?2004l
+]2;sudo docker exec -it exe1.3 bash]1;docker]0;root@628189527d2a: /usr/src/approot@628189527d2a:/usr/src/app# tail -f ./text.log
+2023-04-20 19:50:44 +0000 UTC
+2023-04-20 19:50:46 +0000 UTC
+Secret message is: 'You can find the source code here: https://github.com/docker-hy'
+2023-04-20 19:50:48 +0000 UTC
+2023-04-20 19:50:50 +0000 UTC
+2023-04-20 19:50:52 +0000 UTC
+2023-04-20 19:50:54 +0000 UTC
+2023-04-20 19:50:56 +0000 UTC
+Secret message is: 'You can find the source code here: https://github.com/docker-hy'
+2023-04-20 19:50:58 +0000 UTC
+2023-04-20 19:51:00 +0000 UTC
+2023-04-20 19:51:02 +0000 UTC
+2023-04-20 19:51:04 +0000 UTC
+2023-04-20 19:51:06 +0000 UTC
+Secret message is: 'You can find the source code here: https://github.com/docker-hy'
+2023-04-20 19:51:08 +0000 UTC
+^C
+]0;root@628189527d2a: /usr/src/approot@628189527d2a:/usr/src/app# exit
+[1m[7m%[27m[1m[0m                                                                                                                                                                                             ]2;shalltear@dainstudios:~/projects/devops_with_docker/exercises]1;..ker/exercises]7;file://dainstudios/home/shalltear/projects/devops_with_docker/exercises[0m[27m[24m[J[32mshalltear@dainstudios: [00m[34m/home/shalltear/projects/devops_with_docker/exercises [00m[01;34mgit:([31mmaster[34m) [33m✗[00m[00m[01;34m [00m
+[01;31m➜ [27m [00m [K[?1h=[?2004heexit[?1l>[?2004l
+]2;exit]1;exit
+Script done on 2023-04-20 21:51:14+02:00 [COMMAND_EXIT_CODE="130"]
