@@ -1,0 +1,12 @@
+Script started on 2023-04-20 20:24:56+02:00 [TERM="xterm-256color" TTY="/dev/pts/1" COLUMNS="189" LINES="40"]
+[1m[7m%[27m[1m[0m                                                                                                                                                                                             ]2;shalltear@dainstudios:~/projects/devops_with_docker/exercises]1;..ker/exercises]7;file://dainstudios/home/shalltear/projects/devops_with_docker/exercises[0m[27m[24m[J[32mshalltear@dainstudios: [00m[34m/home/shalltear/projects/devops_with_docker/exercises [00m[01;34mgit:([31mmaster[34m) [33m✗[00m[00m[01;34m [00m
+[01;32m➜  [00m [K[?1h=[?2004hssudo docker ps -a[?1l>[?2004l
+]2;sudo docker ps -a]1;docker[sudo] password for shalltear: 
+CONTAINER ID   IMAGE     COMMAND                  CREATED         STATUS                      PORTS                                                  NAMES
+13c60ab05459   redis     "docker-entrypoint.s…"   2 minutes ago   Exited (0) 13 seconds ago                                                          relaxed_elbakyan
+304898c5ffe3   mysql     "docker-entrypoint.s…"   2 minutes ago   Up 2 minutes                0.0.0.0:3306->3306/tcp, :::3306->3306/tcp, 33060/tcp   compassionate_kowalevski
+a8bd91f5cd10   nginx     "/docker-entrypoint.…"   2 minutes ago   Exited (0) 13 seconds ago                                                          sleepy_kirch
+[1m[7m%[27m[1m[0m                                                                                                                                                                                             ]2;shalltear@dainstudios:~/projects/devops_with_docker/exercises]1;..ker/exercises]7;file://dainstudios/home/shalltear/projects/devops_with_docker/exercises[0m[27m[24m[J[32mshalltear@dainstudios: [00m[34m/home/shalltear/projects/devops_with_docker/exercises [00m[01;34mgit:([31mmaster[34m) [33m✗[00m[00m[01;34m [00m
+[01;32m➜  [00m [K[?1h=[?2004heexit[?1l>[?2004l
+]2;exit]1;exit
+Script done on 2023-04-20 20:25:07+02:00 [COMMAND_EXIT_CODE="0"]
