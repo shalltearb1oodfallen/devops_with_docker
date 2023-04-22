@@ -1,0 +1,44 @@
+Script started on 2023-04-22 17:21:20+02:00 [TERM="xterm-256color" TTY="/dev/pts/1" COLUMNS="189" LINES="40"]
+[1m[7m%[27m[1m[0m                                                                                                                                                                                             ]2;shalltear@dainstudios:~/projects/devops_with_docker/exercises]1;..ker/exercises]7;file://dainstudios/home/shalltear/projects/devops_with_docker/exercises[0m[27m[24m[J[32mshalltear@dainstudios: [00m[34m/home/shalltear/projects/devops_with_docker/exercises [00m[01;34mgit:([31mmaster[34m) [33m✗[00m[00m[01;34m [00m
+[01;32m➜  [00m [K[?1h=[?2004hssudo docker run -it devopsdocjer   keruh/simple-web-service:un buntu      alpine[?1l>[?2004l
+]2;sudo docker run -it devopsdockeruh/simple-web-service:alpine]1;docker[sudo] password for shalltear: 
+Starting log output
+Wrote text to /usr/src/app/text.log
+Wrote text to /usr/src/app/text.log
+^C[1m[7m%[27m[1m[0m                                                                                                                                                                                             ]2;shalltear@dainstudios:~/projects/devops_with_docker/exercises]1;..ker/exercises]7;file://dainstudios/home/shalltear/projects/devops_with_docker/exercises[0m[27m[24m[J[32mshalltear@dainstudios: [00m[34m/home/shalltear/projects/devops_with_docker/exercises [00m[01;34mgit:([31mmaster[34m) [33m✗[00m[00m[01;34m [00m
+[01;31m➜ [27m [00m [K[?1h=[?2004hssudo docker start      restart task           ps -a[?1l>[?2004l
+]2;sudo docker ps -a]1;dockerCONTAINER ID   IMAGE                                      COMMAND                   CREATED          STATUS                          PORTS     NAMES
+0449cdf71fdd   devopsdockeruh/simple-web-service:alpine   "/usr/src/app/server"     25 seconds ago   Exited (2) 22 seconds ago                 nostalgic_feistel
+32e9144fcdeb   devopsdockeruh/simple-web-service:alpine   "/usr/src/app/server"     3 minutes ago    Exited (2) About a minute ago             sharp_dhawan
+0c63ec5a55fe   devopsdockeruh/simple-web-service:alpine   "/usr/src/app/server…"    3 minutes ago    Exited (0) 3 minutes ago                  admiring_agnesi
+259563dded0c   ubuntu:latest                              "sh -c 'echo \"Input …"   3 hours ago      Exited (0) 2 hours ago                    task4
+5245e576405f   devopsdockeruh/simple-web-service          "/usr/src/app/server…"    44 hours ago     Exited (2) 40 hours ago                   blissful_einstein
+565456b3f0a9   devopsdockeruh/simple-web-service          "/usr/src/app/server…"    44 hours ago     Exited (2) 44 hours ago                   crazy_mestorf
+2eb35b4953ac   devopsdockeruh/simple-web-service          "/usr/src/app/server…"    44 hours ago     Exited (2) 44 hours ago                   unruffled_wu
+ae40198bc94c   devopsdockeruh/simple-web-service          "/usr/src/app/server…"    44 hours ago     Exited (0) 44 hours ago                   determined_shamir
+ba183e8769a0   devopsdockeruh/simple-web-service:ubuntu   "/usr/src/app/server…"    44 hours ago     Exited (0) 44 hours ago                   task1.3
+[1m[7m%[27m[1m[0m                                                                                                                                                                                             ]2;shalltear@dainstudios:~/projects/devops_with_docker/exercises]1;..ker/exercises]7;file://dainstudios/home/shalltear/projects/devops_with_docker/exercises[0m[27m[24m[J[32mshalltear@dainstudios: [00m[34m/home/shalltear/projects/devops_with_docker/exercises [00m[01;34mgit:([31mmaster[34m) [33m✗[00m[00m[01;34m [00m
+[01;32m➜  [00m [K[?1h=[?2004hssudo docker restart nostalgic_feistel[?1l>[?2004l
+]2;sudo docker restart nostalgic_feistel]1;dockernostalgic_feistel
+[1m[7m%[27m[1m[0m                                                                                                                                                                                             ]2;shalltear@dainstudios:~/projects/devops_with_docker/exercises]1;..ker/exercises]7;file://dainstudios/home/shalltear/projects/devops_with_docker/exercises[0m[27m[24m[J[32mshalltear@dainstudios: [00m[34m/home/shalltear/projects/devops_with_docker/exercises [00m[01;34mgit:([31mmaster[34m) [33m✗[00m[00m[01;34m [00m
+[01;32m➜  [00m [K[?1h=[?2004hssudo docker exec -it nostalgic_feistel sh[?1l>[?2004l
+]2;sudo docker exec -it nostalgic_feistel sh]1;docker/usr/src/app # [6ntail -f ./zr[J[Jtext-l[J[J.log
+2023-04-22 15:22:45 +0000 UTC
+2023-04-22 15:22:47 +0000 UTC
+2023-04-22 15:22:49 +0000 UTC
+2023-04-22 15:22:51 +0000 UTC
+Secret message is: 'You can find the source code here: https://github.com/docker-hy'
+2023-04-22 15:22:53 +0000 UTC
+2023-04-22 15:22:55 +0000 UTC
+2023-04-22 15:22:57 +0000 UTC
+2023-04-22 15:22:59 +0000 UTC
+2023-04-22 15:23:01 +0000 UTC
+Secret message is: 'You can find the source code here: https://github.com/docker-hy'
+2023-04-22 15:23:03 +0000 UTC
+2023-04-22 15:23:05 +0000 UTC
+^C
+/usr/src/app # [6n
+[1m[7m%[27m[1m[0m                                                                                                                                                                                             ]2;shalltear@dainstudios:~/projects/devops_with_docker/exercises]1;..ker/exercises]7;file://dainstudios/home/shalltear/projects/devops_with_docker/exercises[0m[27m[24m[J[32mshalltear@dainstudios: [00m[34m/home/shalltear/projects/devops_with_docker/exercises [00m[01;34mgit:([31mmaster[34m) [33m✗[00m[00m[01;34m [00m
+[01;31m➜ [27m [00m [K[?1h=[?2004heexit[?1l>[?2004l
+]2;exit]1;exit
+Script done on 2023-04-22 17:23:09+02:00 [COMMAND_EXIT_CODE="130"]
