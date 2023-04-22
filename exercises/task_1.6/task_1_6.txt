@@ -1,0 +1,12 @@
+Script started on 2023-04-22 18:29:17+02:00 [TERM="xterm-256color" TTY="/dev/pts/1" COLUMNS="189" LINES="40"]
+[1m[7m%[27m[1m[0m                                                                                                                                                                                             ]2;shalltear@dainstudios:~/projects/devops_with_docker/exercises/task_1.6]1;..ises/task_1.6]7;file://dainstudios/home/shalltear/projects/devops_with_docker/exercises/task_1.6[0m[27m[24m[J[32mshalltear@dainstudios: [00m[34m/home/shalltear/projects/devops_with_docker/exercises/task_1.6 [00m[01;34mgit:([31mmaster[34m) [33m✗[00m[00m[01;34m [00m
+[01;32m➜  [00m [K[?1h=[?2004hssudo docker run -ot devopsdockeruh/pull_exercise[P[30C [31Dit devopsdockeruh/pull_exercise[30D[?1l>[?2004l
+]2;sudo docker run -it devopsdockeruh/pull_exercise]1;docker[sudo] password for shalltear: 
+[1G[0JGive me the password: [23Gbasics
+You found the correct password. Secret message is:
+"This is the secret message"
+
+[1m[7m%[27m[1m[0m                                                                                                                                                                                             ]2;shalltear@dainstudios:~/projects/devops_with_docker/exercises/task_1.6]1;..ises/task_1.6]7;file://dainstudios/home/shalltear/projects/devops_with_docker/exercises/task_1.6[0m[27m[24m[J[32mshalltear@dainstudios: [00m[34m/home/shalltear/projects/devops_with_docker/exercises/task_1.6 [00m[01;34mgit:([31mmaster[34m) [33m✗[00m[00m[01;34m [00m
+[01;32m➜  [00m [K[?1h=[?2004heexit[?1l>[?2004l
+]2;exit]1;exit
+Script done on 2023-04-22 18:29:55+02:00 [COMMAND_EXIT_CODE="0"]
