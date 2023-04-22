@@ -1,0 +1,43 @@
+Script started on 2023-04-22 19:17:28+02:00 [TERM="xterm-256color" TTY="/dev/pts/2" COLUMNS="189" LINES="40"]
+[1m[7m%[27m[1m[0m                                                                                                                                                                                             ]2;shalltear@dainstudios:~/projects/devops_with_docker/exercises/task_1.7]1;..ises/task_1.7]7;file://dainstudios/home/shalltear/projects/devops_with_docker/exercises/task_1.7[0m[27m[24m[J[32mshalltear@dainstudios: [00m[34m/home/shalltear/projects/devops_with_docker/exercises/task_1.7 [00m[01;34mgit:([31mmaster[34m) [33m✗[00m[00m[01;34m [00m
+[01;32m➜  [00m [K[?1h=[?2004hssuo d  do docker build -t curler .[?1l>[?2004l
+]2;sudo docker build -t curler .]1;docker[sudo] password for shalltear: 
+DEPRECATED: The legacy builder is deprecated and will be removed in a future release.
+            Install the buildx component to build images with BuildKit:
+            https://docs.docker.com/go/buildx/
+
+Sending build context to Docker daemon  3.584kB
+Step 1/5 : FROM ubuntu:latest
+ ---> 08d22c0ceb15
+Step 2/5 : RUN apt update &&     apt -y upgrade &&     apt install -y curl
+ ---> Using cache
+ ---> 9f39e37f55f7
+Step 3/5 : WORKDIR /root
+ ---> Using cache
+ ---> 0db6465bf66f
+Step 4/5 : COPY script.sh .
+ ---> 2561295644aa
+Step 5/5 : CMD ["/bin/bash","script.sh"]
+ ---> Running in 04411571eeea
+Removing intermediate container 04411571eeea
+ ---> 5fed5f05ba9c
+Successfully built 5fed5f05ba9c
+Successfully tagged curler:latest
+[1m[7m%[27m[1m[0m                                                                                                                                                                                             ]2;shalltear@dainstudios:~/projects/devops_with_docker/exercises/task_1.7]1;..ises/task_1.7]7;file://dainstudios/home/shalltear/projects/devops_with_docker/exercises/task_1.7[0m[27m[24m[J[32mshalltear@dainstudios: [00m[34m/home/shalltear/projects/devops_with_docker/exercises/task_1.7 [00m[01;34mgit:([31mmaster[34m) [33m✗[00m[00m[01;34m [00m
+[01;32m➜  [00m [K[?1h=[?2004hssudo docker run -it curler[?1l>[?2004l
+]2;sudo docker run -it curler]1;dockerInput website:
+helsinki.fi
+Searching..
+<html>
+<head><title>301 Moved Permanently</title></head>
+<body>
+<center><h1>301 Moved Permanently</h1></center>
+<hr><center>nginx/1.20.1</center>
+</body>
+</html>
+Input website:
+stop
+[1m[7m%[27m[1m[0m                                                                                                                                                                                             ]2;shalltear@dainstudios:~/projects/devops_with_docker/exercises/task_1.7]1;..ises/task_1.7]7;file://dainstudios/home/shalltear/projects/devops_with_docker/exercises/task_1.7[0m[27m[24m[J[32mshalltear@dainstudios: [00m[34m/home/shalltear/projects/devops_with_docker/exercises/task_1.7 [00m[01;34mgit:([31mmaster[34m) [33m✗[00m[00m[01;34m [00m
+[01;32m➜  [00m [K[?1h=[?2004heexit[?1l>[?2004l
+]2;exit]1;exit
+Script done on 2023-04-22 19:18:25+02:00 [COMMAND_EXIT_CODE="0"]
