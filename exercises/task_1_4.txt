@@ -1,0 +1,274 @@
+Script started on 2023-04-22 14:50:52+02:00 [TERM="xterm-256color" TTY="/dev/pts/1" COLUMNS="189" LINES="40"]
+[1m[7m%[27m[1m[0m                                                                                                                                                                                             ]2;shalltear@dainstudios:~/projects/devops_with_docker/exercises]1;..ker/exercises]7;file://dainstudios/home/shalltear/projects/devops_with_docker/exercises[0m[27m[24m[J[32mshalltear@dainstudios: [00m[34m/home/shalltear/projects/devops_with_docker/exercises [00m[01;34mgit:([31mmaster[34m) [33m✗[00m[00m[01;34m [00m
+[01;32m➜  [00m [K[?1h=[?2004h[7msudo docker run -d -it --name task4 ubuntu:latest sh -c 'echo "Input website:"; read website; echo "Searching.."; sleep 1; curl http://$website;'[27m[145D[27ms[27mu[27md[27mo[27m [27md[27mo[27mc[27mk[27me[27mr[27m [27mr[27mu[27mn[27m [27m-[27md[27m [27m-[27mi[27mt[27m [27m-[27m-[27mn[27ma[27mm[27me[27m [27mt[27ma[27ms[27mk[27m4[27m [27mu[27mb[27mu[27mn[27mt[27mu[27m:[27ml[27ma[27mt[27me[27ms[27mt[27m [27ms[27mh[27m [27m-[27mc[27m [27m'[27me[27mc[27mh[27mo[27m [27m"[27mI[27mn[27mp[27mu[27mt[27m [27mw[27me[27mb[27ms[27mi[27mt[27me[27m:[27m"[27m;[27m [27mr[27me[27ma[27md[27m [27mw[27me[27mb[27ms[27mi[27mt[27me[27m;[27m [27me[27mc[27mh[27mo[27m [27m"[27mS[27me[27ma[27mr[27mc[27mh[27mi[27mn[27mg[27m.[27m.[27m"[27m;[27m [27ms[27ml[27me[27me[27mp[27m [27m1[27m;[27m [27mc[27mu[27mr[27ml[27m [27mh[27mt[27mt[27mp[27m:[27m/[27m/[27m$[27mw[27me[27mb[27ms[27mi[27mt[27me[27m;[27m'[?1l>[?2004l
+]2;sudo docker run -d -it --name task4 ubuntu:latest sh -c ]1;docker[sudo] password for shalltear: 
+259563dded0c7188b59d47ef0c599b84b91fd4003972956c9fc6c122157cf2de
+[1m[7m%[27m[1m[0m                                                                                                                                                                                             ]2;shalltear@dainstudios:~/projects/devops_with_docker/exercises]1;..ker/exercises]7;file://dainstudios/home/shalltear/projects/devops_with_docker/exercises[0m[27m[24m[J[32mshalltear@dainstudios: [00m[34m/home/shalltear/projects/devops_with_docker/exercises [00m[01;34mgit:([31mmaster[34m) [33m✗[00m[00m[01;34m [00m
+[01;32m➜  [00m [K[?1h=[?2004hssudo docker exec task4 bah sh[?1l>[?2004l
+]2;sudo docker exec task4 bash]1;docker[1m[7m%[27m[1m[0m                                                                                                                                                                                             ]2;shalltear@dainstudios:~/projects/devops_with_docker/exercises]1;..ker/exercises]7;file://dainstudios/home/shalltear/projects/devops_with_docker/exercises[0m[27m[24m[J[32mshalltear@dainstudios: [00m[34m/home/shalltear/projects/devops_with_docker/exercises [00m[01;34mgit:([31mmaster[34m) [33m✗[00m[00m[01;34m [00m
+[01;32m➜  [00m [K[?1h=[?2004hsudo docker exec task4 bash[1C    sh[?1l>[?2004l
+]2;sudo docker exec task4 sh]1;docker[1m[7m%[27m[1m[0m                                                                                                                                                                                             ]2;shalltear@dainstudios:~/projects/devops_with_docker/exercises]1;..ker/exercises]7;file://dainstudios/home/shalltear/projects/devops_with_docker/exercises[0m[27m[24m[J[32mshalltear@dainstudios: [00m[34m/home/shalltear/projects/devops_with_docker/exercises [00m[01;34mgit:([31mmaster[34m) [33m✗[00m[00m[01;34m [00m
+[01;32m➜  [00m [K[?1h=[?2004hssudo od  docker ps -a[?1l>[?2004l
+]2;sudo docker ps -a]1;dockerCONTAINER ID   IMAGE                                      COMMAND                   CREATED          STATUS                    PORTS     NAMES
+259563dded0c   ubuntu:latest                              "sh -c 'echo \"Input …"   43 seconds ago   Up 42 seconds                       task4
+5245e576405f   devopsdockeruh/simple-web-service          "/usr/src/app/server…"    41 hours ago     Exited (2) 38 hours ago             blissful_einstein
+565456b3f0a9   devopsdockeruh/simple-web-service          "/usr/src/app/server…"    41 hours ago     Exited (2) 41 hours ago             crazy_mestorf
+2eb35b4953ac   devopsdockeruh/simple-web-service          "/usr/src/app/server…"    41 hours ago     Exited (2) 41 hours ago             unruffled_wu
+ae40198bc94c   devopsdockeruh/simple-web-service          "/usr/src/app/server…"    41 hours ago     Exited (0) 41 hours ago             determined_shamir
+ba183e8769a0   devopsdockeruh/simple-web-service:ubuntu   "/usr/src/app/server…"    41 hours ago     Exited (0) 41 hours ago             task1.3
+[1m[7m%[27m[1m[0m                                                                                                                                                                                             ]2;shalltear@dainstudios:~/projects/devops_with_docker/exercises]1;..ker/exercises]7;file://dainstudios/home/shalltear/projects/devops_with_docker/exercises[0m[27m[24m[J[32mshalltear@dainstudios: [00m[34m/home/shalltear/projects/devops_with_docker/exercises [00m[01;34mgit:([31mmaster[34m) [33m✗[00m[00m[01;34m [00m
+[01;32m➜  [00m [K[?1h=[?2004hssudo docker exec task4[?1l>[?2004l
+]2;sudo docker exec task4]1;docker"docker exec" requires at least 2 arguments.
+See 'docker exec --help'.
+
+Usage:  docker exec [OPTIONS] CONTAINER COMMAND [ARG...]
+
+Execute a command in a running container
+[1m[7m%[27m[1m[0m                                                                                                                                                                                             ]2;shalltear@dainstudios:~/projects/devops_with_docker/exercises]1;..ker/exercises]7;file://dainstudios/home/shalltear/projects/devops_with_docker/exercises[0m[27m[24m[J[32mshalltear@dainstudios: [00m[34m/home/shalltear/projects/devops_with_docker/exercises [00m[01;34mgit:([31mmaster[34m) [33m✗[00m[00m[01;34m [00m
+[01;31m➜ [27m [00m [K[?1h=[?2004hsudo docker exec task4 bash[?1l>[?2004l
+]2;sudo docker exec task4 bash]1;docker[1m[7m%[27m[1m[0m                                                                                                                                                                                             ]2;shalltear@dainstudios:~/projects/devops_with_docker/exercises]1;..ker/exercises]7;file://dainstudios/home/shalltear/projects/devops_with_docker/exercises[0m[27m[24m[J[32mshalltear@dainstudios: [00m[34m/home/shalltear/projects/devops_with_docker/exercises [00m[01;34mgit:([31mmaster[34m) [33m✗[00m[00m[01;34m [00m
+[01;32m➜  [00m [K[?1h=[?2004hssudo docker exet  x  xc  c task4 bash     sh -c " 'apt updeat    date && apt upgrade -y && apt install wegt     curl wget nano" '[?1l>[?2004l
+]2;sudo docker exec task4 sh -c ]1;docker
+WARNING: apt does not have a stable CLI interface. Use with caution in scripts.
+
+Get:1 http://archive.ubuntu.com/ubuntu jammy InRelease [270 kB]
+Get:2 http://archive.ubuntu.com/ubuntu jammy-updates InRelease [119 kB]
+Get:3 http://archive.ubuntu.com/ubuntu jammy-backports InRelease [108 kB]
+Get:4 http://archive.ubuntu.com/ubuntu jammy/universe amd64 Packages [17.5 MB]
+Get:5 http://security.ubuntu.com/ubuntu jammy-security InRelease [110 kB]
+Get:6 http://security.ubuntu.com/ubuntu jammy-security/main amd64 Packages [959 kB]
+Get:7 http://archive.ubuntu.com/ubuntu jammy/restricted amd64 Packages [164 kB]
+Get:8 http://archive.ubuntu.com/ubuntu jammy/multiverse amd64 Packages [266 kB]
+Get:9 http://archive.ubuntu.com/ubuntu jammy/main amd64 Packages [1792 kB]
+Get:10 http://archive.ubuntu.com/ubuntu jammy-updates/multiverse amd64 Packages [28.6 kB]
+Get:11 http://archive.ubuntu.com/ubuntu jammy-updates/main amd64 Packages [1301 kB]
+Get:12 http://archive.ubuntu.com/ubuntu jammy-updates/universe amd64 Packages [1153 kB]
+Get:13 http://archive.ubuntu.com/ubuntu jammy-updates/restricted amd64 Packages [1054 kB]
+Get:14 http://archive.ubuntu.com/ubuntu jammy-backports/main amd64 Packages [49.4 kB]
+Get:15 http://archive.ubuntu.com/ubuntu jammy-backports/universe amd64 Packages [25.6 kB]
+Get:16 http://security.ubuntu.com/ubuntu jammy-security/universe amd64 Packages [911 kB]
+Get:17 http://security.ubuntu.com/ubuntu jammy-security/multiverse amd64 Packages [23.2 kB]
+Get:18 http://security.ubuntu.com/ubuntu jammy-security/restricted amd64 Packages [1000 kB]
+Fetched 26.8 MB in 2s (13.8 MB/s)
+Reading package lists...
+Building dependency tree...
+Reading state information...
+4 packages can be upgraded. Run 'apt list --upgradable' to see them.
+
+WARNING: apt does not have a stable CLI interface. Use with caution in scripts.
+
+Reading package lists...
+Building dependency tree...
+Reading state information...
+Calculating upgrade...
+The following packages will be upgraded:
+  apt libapt-pkg6.0 libsystemd0 libudev1
+4 upgraded, 0 newly installed, 0 to remove and 0 not upgraded.
+Need to get 2680 kB of archives.
+After this operation, 2048 B of additional disk space will be used.
+Get:1 http://archive.ubuntu.com/ubuntu jammy-updates/main amd64 libsystemd0 amd64 249.11-0ubuntu3.9 [318 kB]
+Get:2 http://archive.ubuntu.com/ubuntu jammy-updates/main amd64 libudev1 amd64 249.11-0ubuntu3.9 [77.1 kB]
+Get:3 http://archive.ubuntu.com/ubuntu jammy-updates/main amd64 libapt-pkg6.0 amd64 2.4.9 [906 kB]
+Get:4 http://archive.ubuntu.com/ubuntu jammy-updates/main amd64 apt amd64 2.4.9 [1379 kB]
+debconf: delaying package configuration, since apt-utils is not installed
+Fetched 2680 kB in 0s (11.8 MB/s)
+(Reading database ... (Reading database ... 5%(Reading database ... 10%(Reading database ... 15%(Reading database ... 20%(Reading database ... 25%(Reading database ... 30%(Reading database ... 35%(Reading database ... 40%(Reading database ... 45%(Reading database ... 50%(Reading database ... 55%(Reading database ... 60%(Reading database ... 65%(Reading database ... 70%(Reading database ... 75%(Reading database ... 80%(Reading database ... 85%(Reading database ... 90%(Reading database ... 95%(Reading database ... 100%(Reading database ... 4395 files and directories currently installed.)
+Preparing to unpack .../libsystemd0_249.11-0ubuntu3.9_amd64.deb ...
+Unpacking libsystemd0:amd64 (249.11-0ubuntu3.9) over (249.11-0ubuntu3.7) ...
+Setting up libsystemd0:amd64 (249.11-0ubuntu3.9) ...
+(Reading database ... (Reading database ... 5%(Reading database ... 10%(Reading database ... 15%(Reading database ... 20%(Reading database ... 25%(Reading database ... 30%(Reading database ... 35%(Reading database ... 40%(Reading database ... 45%(Reading database ... 50%(Reading database ... 55%(Reading database ... 60%(Reading database ... 65%(Reading database ... 70%(Reading database ... 75%(Reading database ... 80%(Reading database ... 85%(Reading database ... 90%(Reading database ... 95%(Reading database ... 100%(Reading database ... 4395 files and directories currently installed.)
+Preparing to unpack .../libudev1_249.11-0ubuntu3.9_amd64.deb ...
+Unpacking libudev1:amd64 (249.11-0ubuntu3.9) over (249.11-0ubuntu3.7) ...
+Setting up libudev1:amd64 (249.11-0ubuntu3.9) ...
+(Reading database ... (Reading database ... 5%(Reading database ... 10%(Reading database ... 15%(Reading database ... 20%(Reading database ... 25%(Reading database ... 30%(Reading database ... 35%(Reading database ... 40%(Reading database ... 45%(Reading database ... 50%(Reading database ... 55%(Reading database ... 60%(Reading database ... 65%(Reading database ... 70%(Reading database ... 75%(Reading database ... 80%(Reading database ... 85%(Reading database ... 90%(Reading database ... 95%(Reading database ... 100%(Reading database ... 4395 files and directories currently installed.)
+Preparing to unpack .../libapt-pkg6.0_2.4.9_amd64.deb ...
+Unpacking libapt-pkg6.0:amd64 (2.4.9) over (2.4.8) ...
+Setting up libapt-pkg6.0:amd64 (2.4.9) ...
+(Reading database ... (Reading database ... 5%(Reading database ... 10%(Reading database ... 15%(Reading database ... 20%(Reading database ... 25%(Reading database ... 30%(Reading database ... 35%(Reading database ... 40%(Reading database ... 45%(Reading database ... 50%(Reading database ... 55%(Reading database ... 60%(Reading database ... 65%(Reading database ... 70%(Reading database ... 75%(Reading database ... 80%(Reading database ... 85%(Reading database ... 90%(Reading database ... 95%(Reading database ... 100%(Reading database ... 4395 files and directories currently installed.)
+Preparing to unpack .../archives/apt_2.4.9_amd64.deb ...
+Unpacking apt (2.4.9) over (2.4.8) ...
+Setting up apt (2.4.9) ...
+Processing triggers for libc-bin (2.35-0ubuntu3.1) ...
+
+WARNING: apt does not have a stable CLI interface. Use with caution in scripts.
+
+Reading package lists...
+Building dependency tree...
+Reading state information...
+The following additional packages will be installed:
+  ca-certificates libbrotli1 libcurl4 libldap-2.5-0 libldap-common
+  libnghttp2-14 libpsl5 librtmp1 libsasl2-2 libsasl2-modules
+  libsasl2-modules-db libssh-4 openssl publicsuffix
+Suggested packages:
+  libsasl2-modules-gssapi-mit | libsasl2-modules-gssapi-heimdal
+  libsasl2-modules-ldap libsasl2-modules-otp libsasl2-modules-sql hunspell
+The following NEW packages will be installed:
+  ca-certificates curl libbrotli1 libcurl4 libldap-2.5-0 libldap-common
+  libnghttp2-14 libpsl5 librtmp1 libsasl2-2 libsasl2-modules
+  libsasl2-modules-db libssh-4 nano openssl publicsuffix wget
+0 upgraded, 17 newly installed, 0 to remove and 0 not upgraded.
+Need to get 3624 kB of archives.
+After this operation, 8989 kB of additional disk space will be used.
+Do you want to continue? [Y/n] Abort.
+[1m[7m%[27m[1m[0m                                                                                                                                                                                             ]2;shalltear@dainstudios:~/projects/devops_with_docker/exercises]1;..ker/exercises]7;file://dainstudios/home/shalltear/projects/devops_with_docker/exercises[0m[27m[24m[J[32mshalltear@dainstudios: [00m[34m/home/shalltear/projects/devops_with_docker/exercises [00m[01;34mgit:([31mmaster[34m) [33m✗[00m[00m[01;34m [00m
+[01;31m➜ [27m [00m [K[?1h=[?2004hsudo docker exec task4 sh -c 'apt update && apt upgrade -y && apt install curl wget nano' '-'y'[?1l>[?2004l
+]2;sudo docker exec task4 sh -c ]1;docker
+WARNING: apt does not have a stable CLI interface. Use with caution in scripts.
+
+Hit:1 http://archive.ubuntu.com/ubuntu jammy InRelease
+Hit:2 http://archive.ubuntu.com/ubuntu jammy-updates InRelease
+Hit:3 http://archive.ubuntu.com/ubuntu jammy-backports InRelease
+Hit:4 http://security.ubuntu.com/ubuntu jammy-security InRelease
+Reading package lists...
+Building dependency tree...
+Reading state information...
+All packages are up to date.
+
+WARNING: apt does not have a stable CLI interface. Use with caution in scripts.
+
+Reading package lists...
+Building dependency tree...
+Reading state information...
+Calculating upgrade...
+0 upgraded, 0 newly installed, 0 to remove and 0 not upgraded.
+
+WARNING: apt does not have a stable CLI interface. Use with caution in scripts.
+
+Reading package lists...
+Building dependency tree...
+Reading state information...
+The following additional packages will be installed:
+  ca-certificates libbrotli1 libcurl4 libldap-2.5-0 libldap-common
+  libnghttp2-14 libpsl5 librtmp1 libsasl2-2 libsasl2-modules
+  libsasl2-modules-db libssh-4 openssl publicsuffix
+Suggested packages:
+  libsasl2-modules-gssapi-mit | libsasl2-modules-gssapi-heimdal
+  libsasl2-modules-ldap libsasl2-modules-otp libsasl2-modules-sql hunspell
+The following NEW packages will be installed:
+  ca-certificates curl libbrotli1 libcurl4 libldap-2.5-0 libldap-common
+  libnghttp2-14 libpsl5 librtmp1 libsasl2-2 libsasl2-modules
+  libsasl2-modules-db libssh-4 nano openssl publicsuffix wget
+0 upgraded, 17 newly installed, 0 to remove and 0 not upgraded.
+Need to get 3624 kB of archives.
+After this operation, 8989 kB of additional disk space will be used.
+Get:1 http://archive.ubuntu.com/ubuntu jammy-updates/main amd64 openssl amd64 3.0.2-0ubuntu1.8 [1184 kB]
+Get:2 http://archive.ubuntu.com/ubuntu jammy-updates/main amd64 ca-certificates all 20211016ubuntu0.22.04.1 [144 kB]
+Get:3 http://archive.ubuntu.com/ubuntu jammy/main amd64 libnghttp2-14 amd64 1.43.0-1build3 [76.3 kB]
+Get:4 http://archive.ubuntu.com/ubuntu jammy/main amd64 libpsl5 amd64 0.21.0-1.2build2 [58.4 kB]
+Get:5 http://archive.ubuntu.com/ubuntu jammy/main amd64 nano amd64 6.2-1 [280 kB]
+Get:6 http://archive.ubuntu.com/ubuntu jammy/main amd64 publicsuffix all 20211207.1025-1 [129 kB]
+Get:7 http://archive.ubuntu.com/ubuntu jammy/main amd64 wget amd64 1.21.2-2ubuntu1 [367 kB]
+Get:8 http://archive.ubuntu.com/ubuntu jammy/main amd64 libbrotli1 amd64 1.0.9-2build6 [315 kB]
+Get:9 http://archive.ubuntu.com/ubuntu jammy-updates/main amd64 libsasl2-modules-db amd64 2.1.27+dfsg2-3ubuntu1.2 [20.5 kB]
+Get:10 http://archive.ubuntu.com/ubuntu jammy-updates/main amd64 libsasl2-2 amd64 2.1.27+dfsg2-3ubuntu1.2 [53.8 kB]
+Get:11 http://archive.ubuntu.com/ubuntu jammy-updates/main amd64 libldap-2.5-0 amd64 2.5.14+dfsg-0ubuntu0.22.04.2 [183 kB]
+Get:12 http://archive.ubuntu.com/ubuntu jammy/main amd64 librtmp1 amd64 2.4+20151223.gitfa8646d.1-2build4 [58.2 kB]
+Get:13 http://archive.ubuntu.com/ubuntu jammy/main amd64 libssh-4 amd64 0.9.6-2build1 [184 kB]
+Get:14 http://archive.ubuntu.com/ubuntu jammy-updates/main amd64 libcurl4 amd64 7.81.0-1ubuntu1.10 [290 kB]
+Get:15 http://archive.ubuntu.com/ubuntu jammy-updates/main amd64 curl amd64 7.81.0-1ubuntu1.10 [194 kB]
+Get:16 http://archive.ubuntu.com/ubuntu jammy-updates/main amd64 libldap-common all 2.5.14+dfsg-0ubuntu0.22.04.2 [15.8 kB]
+Get:17 http://archive.ubuntu.com/ubuntu jammy-updates/main amd64 libsasl2-modules amd64 2.1.27+dfsg2-3ubuntu1.2 [68.8 kB]
+debconf: delaying package configuration, since apt-utils is not installed
+Fetched 3624 kB in 0s (8317 kB/s)
+Selecting previously unselected package openssl.
+(Reading database ... (Reading database ... 5%(Reading database ... 10%(Reading database ... 15%(Reading database ... 20%(Reading database ... 25%(Reading database ... 30%(Reading database ... 35%(Reading database ... 40%(Reading database ... 45%(Reading database ... 50%(Reading database ... 55%(Reading database ... 60%(Reading database ... 65%(Reading database ... 70%(Reading database ... 75%(Reading database ... 80%(Reading database ... 85%(Reading database ... 90%(Reading database ... 95%(Reading database ... 100%(Reading database ... 4395 files and directories currently installed.)
+Preparing to unpack .../00-openssl_3.0.2-0ubuntu1.8_amd64.deb ...
+Unpacking openssl (3.0.2-0ubuntu1.8) ...
+Selecting previously unselected package ca-certificates.
+Preparing to unpack .../01-ca-certificates_20211016ubuntu0.22.04.1_all.deb ...
+Unpacking ca-certificates (20211016ubuntu0.22.04.1) ...
+Selecting previously unselected package libnghttp2-14:amd64.
+Preparing to unpack .../02-libnghttp2-14_1.43.0-1build3_amd64.deb ...
+Unpacking libnghttp2-14:amd64 (1.43.0-1build3) ...
+Selecting previously unselected package libpsl5:amd64.
+Preparing to unpack .../03-libpsl5_0.21.0-1.2build2_amd64.deb ...
+Unpacking libpsl5:amd64 (0.21.0-1.2build2) ...
+Selecting previously unselected package nano.
+Preparing to unpack .../04-nano_6.2-1_amd64.deb ...
+Unpacking nano (6.2-1) ...
+Selecting previously unselected package publicsuffix.
+Preparing to unpack .../05-publicsuffix_20211207.1025-1_all.deb ...
+Unpacking publicsuffix (20211207.1025-1) ...
+Selecting previously unselected package wget.
+Preparing to unpack .../06-wget_1.21.2-2ubuntu1_amd64.deb ...
+Unpacking wget (1.21.2-2ubuntu1) ...
+Selecting previously unselected package libbrotli1:amd64.
+Preparing to unpack .../07-libbrotli1_1.0.9-2build6_amd64.deb ...
+Unpacking libbrotli1:amd64 (1.0.9-2build6) ...
+Selecting previously unselected package libsasl2-modules-db:amd64.
+Preparing to unpack .../08-libsasl2-modules-db_2.1.27+dfsg2-3ubuntu1.2_amd64.deb ...
+Unpacking libsasl2-modules-db:amd64 (2.1.27+dfsg2-3ubuntu1.2) ...
+Selecting previously unselected package libsasl2-2:amd64.
+Preparing to unpack .../09-libsasl2-2_2.1.27+dfsg2-3ubuntu1.2_amd64.deb ...
+Unpacking libsasl2-2:amd64 (2.1.27+dfsg2-3ubuntu1.2) ...
+Selecting previously unselected package libldap-2.5-0:amd64.
+Preparing to unpack .../10-libldap-2.5-0_2.5.14+dfsg-0ubuntu0.22.04.2_amd64.deb ...
+Unpacking libldap-2.5-0:amd64 (2.5.14+dfsg-0ubuntu0.22.04.2) ...
+Selecting previously unselected package librtmp1:amd64.
+Preparing to unpack .../11-librtmp1_2.4+20151223.gitfa8646d.1-2build4_amd64.deb ...
+Unpacking librtmp1:amd64 (2.4+20151223.gitfa8646d.1-2build4) ...
+Selecting previously unselected package libssh-4:amd64.
+Preparing to unpack .../12-libssh-4_0.9.6-2build1_amd64.deb ...
+Unpacking libssh-4:amd64 (0.9.6-2build1) ...
+Selecting previously unselected package libcurl4:amd64.
+Preparing to unpack .../13-libcurl4_7.81.0-1ubuntu1.10_amd64.deb ...
+Unpacking libcurl4:amd64 (7.81.0-1ubuntu1.10) ...
+Selecting previously unselected package curl.
+Preparing to unpack .../14-curl_7.81.0-1ubuntu1.10_amd64.deb ...
+Unpacking curl (7.81.0-1ubuntu1.10) ...
+Selecting previously unselected package libldap-common.
+Preparing to unpack .../15-libldap-common_2.5.14+dfsg-0ubuntu0.22.04.2_all.deb ...
+Unpacking libldap-common (2.5.14+dfsg-0ubuntu0.22.04.2) ...
+Selecting previously unselected package libsasl2-modules:amd64.
+Preparing to unpack .../16-libsasl2-modules_2.1.27+dfsg2-3ubuntu1.2_amd64.deb ...
+Unpacking libsasl2-modules:amd64 (2.1.27+dfsg2-3ubuntu1.2) ...
+Setting up libpsl5:amd64 (0.21.0-1.2build2) ...
+Setting up wget (1.21.2-2ubuntu1) ...
+Setting up libbrotli1:amd64 (1.0.9-2build6) ...
+Setting up libsasl2-modules:amd64 (2.1.27+dfsg2-3ubuntu1.2) ...
+Setting up libnghttp2-14:amd64 (1.43.0-1build3) ...
+Setting up libldap-common (2.5.14+dfsg-0ubuntu0.22.04.2) ...
+Setting up libsasl2-modules-db:amd64 (2.1.27+dfsg2-3ubuntu1.2) ...
+Setting up librtmp1:amd64 (2.4+20151223.gitfa8646d.1-2build4) ...
+Setting up libsasl2-2:amd64 (2.1.27+dfsg2-3ubuntu1.2) ...
+Setting up libssh-4:amd64 (0.9.6-2build1) ...
+Setting up nano (6.2-1) ...
+update-alternatives: using /bin/nano to provide /usr/bin/editor (editor) in auto mode
+update-alternatives: warning: skip creation of /usr/share/man/man1/editor.1.gz because associated file /usr/share/man/man1/nano.1.gz (of link group editor) doesn't exist
+update-alternatives: using /bin/nano to provide /usr/bin/pico (pico) in auto mode
+update-alternatives: warning: skip creation of /usr/share/man/man1/pico.1.gz because associated file /usr/share/man/man1/nano.1.gz (of link group pico) doesn't exist
+Setting up openssl (3.0.2-0ubuntu1.8) ...
+Setting up publicsuffix (20211207.1025-1) ...
+Setting up libldap-2.5-0:amd64 (2.5.14+dfsg-0ubuntu0.22.04.2) ...
+Setting up ca-certificates (20211016ubuntu0.22.04.1) ...
+debconf: unable to initialize frontend: Dialog
+debconf: (TERM is not set, so the dialog frontend is not usable.)
+debconf: falling back to frontend: Readline
+debconf: unable to initialize frontend: Readline
+debconf: (Can't locate Term/ReadLine.pm in @INC (you may need to install the Term::ReadLine module) (@INC contains: /etc/perl /usr/local/lib/x86_64-linux-gnu/perl/5.34.0 /usr/local/share/perl/5.34.0 /usr/lib/x86_64-linux-gnu/perl5/5.34 /usr/share/perl5 /usr/lib/x86_64-linux-gnu/perl-base /usr/lib/x86_64-linux-gnu/perl/5.34 /usr/share/perl/5.34 /usr/local/lib/site_perl) at /usr/share/perl5/Debconf/FrontEnd/Readline.pm line 7.)
+debconf: falling back to frontend: Teletype
+Updating certificates in /etc/ssl/certs...
+124 added, 0 removed; done.
+Setting up libcurl4:amd64 (7.81.0-1ubuntu1.10) ...
+Setting up curl (7.81.0-1ubuntu1.10) ...
+Processing triggers for libc-bin (2.35-0ubuntu3.1) ...
+Processing triggers for ca-certificates (20211016ubuntu0.22.04.1) ...
+Updating certificates in /etc/ssl/certs...
+0 added, 0 removed; done.
+Running hooks in /etc/ca-certificates/update.d...
+done.
+[1m[7m%[27m[1m[0m                                                                                                                                                                                             ]2;shalltear@dainstudios:~/projects/devops_with_docker/exercises]1;..ker/exercises]7;file://dainstudios/home/shalltear/projects/devops_with_docker/exercises[0m[27m[24m[J[32mshalltear@dainstudios: [00m[34m/home/shalltear/projects/devops_with_docker/exercises [00m[01;34mgit:([31mmaster[34m) [33m✗[00m[00m[01;34m [00m
+[01;32m➜  [00m [K[?1h=[?2004hddocker     d  ssudo docker attach task4[?1l>[?2004l
+]2;sudo docker attach task4]1;dockerhelsinki.fi
+Searching..
+<html>
+<head><title>301 Moved Permanently</title></head>
+<body>
+<center><h1>301 Moved Permanently</h1></center>
+<hr><center>nginx/1.20.1</center>
+</body>
+</html>
+[1m[7m%[27m[1m[0m                                                                                                                                                                                             ]2;shalltear@dainstudios:~/projects/devops_with_docker/exercises]1;..ker/exercises]7;file://dainstudios/home/shalltear/projects/devops_with_docker/exercises[0m[27m[24m[J[32mshalltear@dainstudios: [00m[34m/home/shalltear/projects/devops_with_docker/exercises [00m[01;34mgit:([31mmaster[34m) [33m✗[00m[00m[01;34m [00m
+[01;32m➜  [00m [K[?1h=[?2004heexit[?1l>[?2004l
+]2;exit]1;exit
+Script done on 2023-04-22 14:54:19+02:00 [COMMAND_EXIT_CODE="0"]
