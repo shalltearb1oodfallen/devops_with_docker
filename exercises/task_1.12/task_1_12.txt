@@ -1,0 +1,35 @@
+Script started on 2023-05-01 14:51:12+02:00 [TERM="xterm-256color" TTY="/dev/pts/1" COLUMNS="189" LINES="40"]
+[1m[7m%[27m[1m[0m                                                                                                                                                                                             ]2;shalltear@dainstudios:~/projects/devops_with_docker/exercises/task_1.12]1;..ses/task_1.12]7;file://dainstudios/home/shalltear/projects/devops_with_docker/exercises/task_1.12[0m[27m[24m[J[32mshalltear@dainstudios: [00m[34m/home/shalltear/projects/devops_with_docker/exercises/task_1.12 [00m[01;34mgit:([31mmaster[34m) [33m✗[00m[00m[01;34m [00m
+[01;32m➜  [00m [K[?1h=[?2004hssudo docker run --rm -it -p 5000:5000 task12[?1l>[?2004l
+]2;sudo docker run --rm -it -p 5000:5000 task12]1;docker[sudo] password for shalltear: 
+[41m[1m ERROR [22m[49m Cannot copy server address to clipboard: Couldn't find the `xsel` binary and fallback didn't work. On Debian/Ubuntu you can install xsel with: sudo apt install xsel.
+[32m[39m
+[32m   ┌────────────────────────────────────────┐[39m
+   [32m│[39m                                        [32m│[39m
+   [32m│[39m   [32mServing![39m                             [32m│[39m
+   [32m│[39m                                        [32m│[39m
+   [32m│[39m   [1m- Local:[22m    http://localhost:5000    [32m│[39m
+   [32m│[39m   [1m- Network:[22m  http://172.17.0.2:5000   [32m│[39m
+   [32m│[39m                                        [32m│[39m
+[32m   └────────────────────────────────────────┘[39m
+[32m[39m
+[44m[1m HTTP [22m[49m [2m5/1/2023 12:51:36 PM[22m [33m172.17.0.1[39m [36mGET /[39m
+[44m[1m HTTP [22m[49m [2m5/1/2023 12:51:36 PM[22m [33m172.17.0.1[39m [32mReturned 304 in 12 ms[39m
+[44m[1m HTTP [22m[49m [2m5/1/2023 12:51:36 PM[22m [33m172.17.0.1[39m [36mGET /static/css/main.eaa5d75e.chunk.css[39m
+[44m[1m HTTP [22m[49m [2m5/1/2023 12:51:36 PM[22m [33m172.17.0.1[39m [36mGET /static/js/2.43ca3586.chunk.js[39m
+[44m[1m HTTP [22m[49m [2m5/1/2023 12:51:36 PM[22m [33m172.17.0.1[39m [36mGET /static/js/main.efdc7a07.chunk.js[39m
+[44m[1m HTTP [22m[49m [2m5/1/2023 12:51:36 PM[22m [33m172.17.0.1[39m [32mReturned 304 in 5 ms[39m
+[44m[1m HTTP [22m[49m [2m5/1/2023 12:51:36 PM[22m [33m172.17.0.1[39m [32mReturned 304 in 2 ms[39m
+[44m[1m HTTP [22m[49m [2m5/1/2023 12:51:36 PM[22m [33m172.17.0.1[39m [32mReturned 304 in 5 ms[39m
+[44m[1m HTTP [22m[49m [2m5/1/2023 12:51:36 PM[22m [33m172.17.0.1[39m [36mGET /static/media/toskalogo.c0f35cf0.svg[39m
+[44m[1m HTTP [22m[49m [2m5/1/2023 12:51:36 PM[22m [33m172.17.0.1[39m [32mReturned 304 in 3 ms[39m
+[44m[1m HTTP [22m[49m [2m5/1/2023 12:51:36 PM[22m [33m172.17.0.1[39m [36mGET /manifest.json[39m
+[44m[1m HTTP [22m[49m [2m5/1/2023 12:51:36 PM[22m [33m172.17.0.1[39m [32mReturned 304 in 2 ms[39m
+[44m[1m HTTP [22m[49m [2m5/1/2023 12:51:36 PM[22m [33m172.17.0.1[39m [36mGET /favicon.ico[39m
+[44m[1m HTTP [22m[49m [2m5/1/2023 12:51:36 PM[22m [33m172.17.0.1[39m [32mReturned 304 in 2 ms[39m
+^C
+[45m[1m INFO [22m[49m Gracefully shutting down. Please wait...
+[1m[7m%[27m[1m[0m                                                                                                                                                                                             ]2;shalltear@dainstudios:~/projects/devops_with_docker/exercises/task_1.12]1;..ses/task_1.12]7;file://dainstudios/home/shalltear/projects/devops_with_docker/exercises/task_1.12[0m[27m[24m[J[32mshalltear@dainstudios: [00m[34m/home/shalltear/projects/devops_with_docker/exercises/task_1.12 [00m[01;34mgit:([31mmaster[34m) [33m✗[00m[00m[01;34m [00m
+[01;32m➜  [00m [K[?1h=[?2004heexit[?1l>[?2004l
+]2;exit]1;exit
+Script done on 2023-05-01 14:52:11+02:00 [COMMAND_EXIT_CODE="0"]
