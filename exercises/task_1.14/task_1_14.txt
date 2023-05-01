@@ -1,174 +1,0 @@
-Script started on 2023-05-01 21:40:15+02:00 [TERM="xterm-256color" TTY="/dev/pts/1" COLUMNS="189" LINES="38"]
-[1m[7m%[27m[1m[0m                                                                                                                                                                                             ]2;shalltear@dainstudios:~/projects/devops_with_docker/exercises/task_1.14]1;..ses/task_1.14]7;file://dainstudios/home/shalltear/projects/devops_with_docker/exercises/task_1.14[0m[27m[24m[J[32mshalltear@dainstudios: [00m[34m/home/shalltear/projects/devops_with_docker/exercises/task_1.14 [00m[01;34mgit:([31mmaster[34m) [33m✗[00m[00m[01;34m [00m
-[01;32m➜  [00m [K[?1h=[?2004hscript task_1_14.txt[20Drm[4P[14C    [16Dls              [14Dcp -r ~/projects/devops_with_docker/exercises/task_1.13/example-backend .[19D2[9Cfrontend .[74Dexit                                                                      [70Dsudo docker build -t frontend -f dockerfile_front . && sudo docker build -t backend -f dockerfile_back .[?1l>[?2004l
-]2;sudo docker build -t frontend -f dockerfile_front . && sudo docker build -t  ]1;docker[sudo] password for shalltear: 
-DEPRECATED: The legacy builder is deprecated and will be removed in a future release.
-            Install the buildx component to build images with BuildKit:
-            https://docs.docker.com/go/buildx/
-
-Sending build context to Docker daemon  557.1kBSending build context to Docker daemon  777.2kB
-Step 1/8 : FROM ubuntu:latest
- ---> 08d22c0ceb15
-Step 2/8 : RUN apt update &&     apt -y install curl &&     curl -sL https://deb.nodesource.com/setup_16.x -o /tmp/nodesource_setup.sh &&     bash /tmp/nodesource_setup.sh &&     apt install nodejs -y
- ---> Using cache
- ---> a61e5a735f58
-Step 3/8 : EXPOSE 5000
- ---> Using cache
- ---> 65d023f10468
-Step 4/8 : WORKDIR /usr/app
- ---> Using cache
- ---> f752556bcb9c
-Step 5/8 : COPY ./example-frontend /usr/app
- ---> Using cache
- ---> b0d859da1416
-Step 6/8 : ENV REACT_APP_BACKEND_URL="http://localhost:8080"
- ---> Using cache
- ---> b6cef34b281b
-Step 7/8 : RUN npm install &&     npm run build &&     npm install -g serve
- ---> Using cache
- ---> 6ae83fd2cf6c
-Step 8/8 : CMD ["serve", "-s", "-l", "5000", "build"]
- ---> Using cache
- ---> 18a40ba59ad8
-Successfully built 18a40ba59ad8
-Successfully tagged frontend:latest
-DEPRECATED: The legacy builder is deprecated and will be removed in a future release.
-            Install the buildx component to build images with BuildKit:
-            https://docs.docker.com/go/buildx/
-
-Sending build context to Docker daemon  557.1kBSending build context to Docker daemon  777.2kB
-Step 1/8 : FROM golang:1.16
- ---> 972d8c0bc0fc
-Step 2/8 : EXPOSE 8080
- ---> Using cache
- ---> 382f08e5c56a
-Step 3/8 : WORKDIR /usr/src/app
- ---> Using cache
- ---> 0acc215efac3
-Step 4/8 : COPY ./example-backend /usr/src/app
- ---> Using cache
- ---> 3431c8930729
-Step 5/8 : RUN go build
- ---> Using cache
- ---> bed3c024dbe5
-Step 6/8 : RUN test ./...
- ---> Using cache
- ---> 672842a61cbb
-Step 7/8 : ENV REQUEST_ORIGIN="http://localhost:5000"
- ---> Using cache
- ---> cbd02f9b7d3d
-Step 8/8 : CMD ["./server"]
- ---> Using cache
- ---> 872c67994844
-Successfully built 872c67994844
-Successfully tagged backend:latest
-[1m[7m%[27m[1m[0m                                                                                                                                                                                             ]2;shalltear@dainstudios:~/projects/devops_with_docker/exercises/task_1.14]1;..ses/task_1.14]7;file://dainstudios/home/shalltear/projects/devops_with_docker/exercises/task_1.14[0m[27m[24m[J[32mshalltear@dainstudios: [00m[34m/home/shalltear/projects/devops_with_docker/exercises/task_1.14 [00m[01;34mgit:([31mmaster[34m) [33m✗[00m[00m[01;34m [00m
-[01;32m➜  [00m [K[?1h=[?2004hsudo docker build -t frontend -f dockerfile_front . && sudo docker build -t backend -f dockerfile_back .[104Dscript task_1_14.tx[2C                                                                                   [84D[20Drm[4P[14C    [16Dls              [14Dcp -r ~/projects/devops_with_docker/exercises/task_1.13/example-backend .[19D2[9Cfrontend .[74Dexit                                                                      [70Dsudo docker build -t frontend -f dockerfile_front . && sudo docker build -t backend -f dockerfile_back .[104Dscript task_1_14.tx[2C                                                                                   [84D[20Drm[4P[14C    [16Dexit            [12Dsudo docker build -t frontend -f dockerfile_front && sudo docker build -t backend -f dockerfile_back[100Dscript task_1_14.tx[2C                                                                               [80D[20Dcode *              [14Dls    cp ~/projects/devops_with_docker/exercises/task_1.13/Dockerfile ./dockerfile_back[81Dls                                                                               [79Dcp ~/projects/devops_with_docker/exercises/task_1.12/Dockerfile ./dockerfile_front[82Dsudo docker stop 1a                                                               [63Dps -a  [17Dcd task_1.14     [12Dls          [10Dcd ..sudo docker run --rm -it -p 5000:5000 task12 & sudo docker run --rm -it -p 8080:8080 task13[?1l>[?2004l
-]2;sudo docker run --rm -it -p 5000:5000 task12 & sudo docker run --rm -it -p  ]1;docker[1] 812656
-[1]  + 812656 suspended (tty output)  sudo docker run --rm -it -p 5000:5000 task12
-[Ex 2.4+] REDIS_HOST env was not passed so redis connection is not initialized
-[Ex 2.6+] POSTGRES_HOST env was not passed so postgres connection is not initialized
-[GIN-debug] [WARNING] Creating an Engine instance with the Logger and Recovery middleware already attached.
-
-[GIN-debug] [WARNING] Running in "debug" mode. Switch to "release" mode in production.
- - using env:	export GIN_MODE=release
- - using code:	gin.SetMode(gin.ReleaseMode)
-
-[GIN-debug] GET    /ping                     --> server/router.pingpong (4 handlers)
-[GIN-debug] GET    /messages                 --> server/controller.GetMessages (4 handlers)
-[GIN-debug] POST   /messages                 --> server/controller.CreateMessage (4 handlers)
-[GIN-debug] Listening and serving HTTP on :8080
-[GIN] 2023/05/01 - 19:40:49 |[97;42m 200 [0m|      78.356µs |      172.17.0.1 |[97;44m GET     [0m "/ping"
-^C[1m[7m%[27m[1m[0m                                                                                                                                                                                             ]2;shalltear@dainstudios:~/projects/devops_with_docker/exercises/task_1.14]1;..ses/task_1.14]7;file://dainstudios/home/shalltear/projects/devops_with_docker/exercises/task_1.14[0m[27m[24m[J[32mshalltear@dainstudios: [00m[34m/home/shalltear/projects/devops_with_docker/exercises/task_1.14 [00m[01;34mgit:([31mmaster[34m) [33m✗[00m[00m[01;34m [00m
-[01;31m➜ [27m [00m [K[?1h=[?2004heexit[?1l>[?2004l
-]2;exit]1;exitzsh: you have suspended jobs.
-[1m[7m%[27m[1m[0m                                                                                                                                                                                             ]2;shalltear@dainstudios:~/projects/devops_with_docker/exercises/task_1.14]1;..ses/task_1.14]7;file://dainstudios/home/shalltear/projects/devops_with_docker/exercises/task_1.14[0m[27m[24m[J[32mshalltear@dainstudios: [00m[34m/home/shalltear/projects/devops_with_docker/exercises/task_1.14 [00m[01;34mgit:([31mmaster[34m) [33m✗[00m[00m[01;34m [00m
-[01;32m➜  [00m [K[?1h=[?2004hkksk  lls[?1l>[?2004l
-]2;ls --color=tty]1;lsdockerfile_back  dockerfile_front  [0m[01;34mexample-backend[0m  [01;34mexample-frontend[0m  task_1_14.txt
-[1m[7m%[27m[1m[0m                                                                                                                                                                                             ]2;shalltear@dainstudios:~/projects/devops_with_docker/exercises/task_1.14]1;..ses/task_1.14]7;file://dainstudios/home/shalltear/projects/devops_with_docker/exercises/task_1.14[0m[27m[24m[J[32mshalltear@dainstudios: [00m[34m/home/shalltear/projects/devops_with_docker/exercises/task_1.14 [00m[01;34mgit:([31mmaster[34m) [33m✗[00m[00m[01;34m [00m
-[01;32m➜  [00m [K[?1h=[?2004hccat task_1_14.txt[1m [0m[0m [?1l>[?2004l
-]2;cat task_1_14.txt]1;catScript started on 2023-05-01 21:40:15+02:00 [TERM="xterm-256color" TTY="/dev/pts/1" COLUMNS="189" LINES="38"]
-[1m[7m%[27m[1m[0m                                                                                                                                                                                             ]2;shalltear@dainstudios:~/projects/devops_with_docker/exercises/task_1.14]1;..ses/task_1.14]7;file://dainstudios/home/shalltear/projects/devops_with_docker/exercises/task_1.14[0m[27m[24m[J[32mshalltear@dainstudios: [00m[34m/home/shalltear/projects/devops_with_docker/exercises/task_1.14 [00m[01;34mgit:([31mmaster[34m) [33m✗[00m[00m[01;34m [00m
-[01;32m➜  [00m [K[?1h=[?2004hscript task_1_14.txt[20Drm[4P[14C    [16Dls              [14Dcp -r ~/projects/devops_with_docker/exercises/task_1.13/example-backend .[19D2[9Cfrontend .[74Dexit                                                                      [70Dsudo docker build -t frontend -f dockerfile_front . && sudo docker build -t backend -f dockerfile_back .[?1l>[?2004l
-]2;sudo docker build -t frontend -f dockerfile_front . && sudo docker build -t  ]1;docker[sudo] password for shalltear: 
-DEPRECATED: The legacy builder is deprecated and will be removed in a future release.
-            Install the buildx component to build images with BuildKit:
-            https://docs.docker.com/go/buildx/
-
-Sending build context to Docker daemon  557.1kBSending build context to Docker daemon  777.2kB
-Step 1/8 : FROM ubuntu:latest
- ---> 08d22c0ceb15
-Step 2/8 : RUN apt update &&     apt -y install curl &&     curl -sL https://deb.nodesource.com/setup_16.x -o /tmp/nodesource_setup.sh &&     bash /tmp/nodesource_setup.sh &&     apt install nodejs -y
- ---> Using cache
- ---> a61e5a735f58
-Step 3/8 : EXPOSE 5000
- ---> Using cache
- ---> 65d023f10468
-Step 4/8 : WORKDIR /usr/app
- ---> Using cache
- ---> f752556bcb9c
-Step 5/8 : COPY ./example-frontend /usr/app
- ---> Using cache
- ---> b0d859da1416
-Step 6/8 : ENV REACT_APP_BACKEND_URL="http://localhost:8080"
- ---> Using cache
- ---> b6cef34b281b
-Step 7/8 : RUN npm install &&     npm run build &&     npm install -g serve
- ---> Using cache
- ---> 6ae83fd2cf6c
-Step 8/8 : CMD ["serve", "-s", "-l", "5000", "build"]
- ---> Using cache
- ---> 18a40ba59ad8
-Successfully built 18a40ba59ad8
-Successfully tagged frontend:latest
-DEPRECATED: The legacy builder is deprecated and will be removed in a future release.
-            Install the buildx component to build images with BuildKit:
-            https://docs.docker.com/go/buildx/
-
-Sending build context to Docker daemon  557.1kBSending build context to Docker daemon  777.2kB
-Step 1/8 : FROM golang:1.16
- ---> 972d8c0bc0fc
-Step 2/8 : EXPOSE 8080
- ---> Using cache
- ---> 382f08e5c56a
-Step 3/8 : WORKDIR /usr/src/app
- ---> Using cache
- ---> 0acc215efac3
-Step 4/8 : COPY ./example-backend /usr/src/app
- ---> Using cache
- ---> 3431c8930729
-Step 5/8 : RUN go build
- ---> Using cache
- ---> bed3c024dbe5
-Step 6/8 : RUN test ./...
- ---> Using cache
- ---> 672842a61cbb
-Step 7/8 : ENV REQUEST_ORIGIN="http://localhost:5000"
- ---> Using cache
- ---> cbd02f9b7d3d
-Step 8/8 : CMD ["./server"]
- ---> Using cache
- ---> 872c67994844
-Successfully built 872c67994844
-Successfully tagged backend:latest
-[1m[7m%[27m[1m[0m                                                                                                                                                                                             ]2;shalltear@dainstudios:~/projects/devops_with_docker/exercises/task_1.14]1;..ses/task_1.14]7;file://dainstudios/home/shalltear/projects/devops_with_docker/exercises/task_1.14[0m[27m[24m[J[32mshalltear@dainstudios: [00m[34m/home/shalltear/projects/devops_with_docker/exercises/task_1.14 [00m[01;34mgit:([31mmaster[34m) [33m✗[00m[00m[01;34m [00m
-[01;32m➜  [00m [K[?1h=[?2004hsudo docker build -t frontend -f dockerfile_front . && sudo docker build -t backend -f dockerfile_back .[104Dscript task_1_14.tx[2C                                                                                   [84D[20Drm[4P[14C    [16Dls              [14Dcp -r ~/projects/devops_with_docker/exercises/task_1.13/example-backend .[19D2[9Cfrontend .[74Dexit                                                                      [70Dsudo docker build -t frontend -f dockerfile_front . && sudo docker build -t backend -f dockerfile_back .[104Dscript task_1_14.tx[2C                                                                                   [84D[20Drm[4P[14C    [16Dexit            [12Dsudo docker build -t frontend -f dockerfile_front && sudo docker build -t backend -f dockerfile_back[100Dscript task_1_14.tx[2C                                                                               [80D[20Dcode *              [14Dls    cp ~/projects/devops_with_docker/exercises/task_1.13/Dockerfile ./dockerfile_back[81Dls                                                                               [79Dcp ~/projects/devops_with_docker/exercises/task_1.12/Dockerfile ./dockerfile_front[82Dsudo docker stop 1a                                                               [63Dps -a  [17Dcd task_1.14     [12Dls          [10Dcd ..sudo docker run --rm -it -p 5000:5000 task12 & sudo docker run --rm -it -p 8080:8080 task13[?1l>[?2004l
-]2;sudo docker run --rm -it -p 5000:5000 task12 & sudo docker run --rm -it -p  ]1;docker[1] 812656
-[1]  + 812656 suspended (tty output)  sudo docker run --rm -it -p 5000:5000 task12
-[Ex 2.4+] REDIS_HOST env was not passed so redis connection is not initialized
-[Ex 2.6+] POSTGRES_HOST env was not passed so postgres connection is not initialized
-[GIN-debug] [WARNING] Creating an Engine instance with the Logger and Recovery middleware already attached.
-
-[GIN-debug] [WARNING] Running in "debug" mode. Switch to "release" mode in production.
- - using env:	export GIN_MODE=release
- - using code:	gin.SetMode(gin.ReleaseMode)
-
-[GIN-debug] GET    /ping                     --> server/router.pingpong (4 handlers)
-[GIN-debug] GET    /messages                 --> server/controller.GetMessages (4 handlers)
-[GIN-debug] POST   /messages                 --> server/controller.CreateMessage (4 handlers)
-[GIN-debug] Listening and serving HTTP on :8080
-[GIN] 2023/05/01 - 19:40:49 |[97;42m 200 [0m|      78.356µs |      172.17.0.1 |[97;44m GET     [0m "/ping"
-^C[1m[7m%[27m[1m[0m                                                                                                                                                                                             ]2;shalltear@dainstudios:~/projects/devops_with_docker/exercises/task_1.14]1;..ses/task_1.14]7;file://dainstudios/home/shalltear/projects/devops_with_docker/exercises/task_1.14[0m[27m[24m[J[32mshalltear@dainstudios: [00m[34m/home/shalltear/projects/devops_with_docker/exercises/task_1.14 [00m[01;34mgit:([31mmaster[34m) [33m✗[00m[00m[01;34m [00m
-[01;31m➜ [27m [00m [K[?1h=[?2004heexit[?1l>[?2004l
-]2;exit]1;exitzsh: you have suspended jobs.
-[1m[7m%[27m[1m[0m                                                                                                                                                                                             

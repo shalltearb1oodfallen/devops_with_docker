@@ -1,0 +1,136 @@
+Script started on 2023-05-01 21:44:09+02:00 [TERM="xterm-256color" TTY="/dev/pts/3" COLUMNS="189" LINES="38"]
+[1m[7m%[27m[1m[0m                                                                                                                                                                                             ]2;shalltear@dainstudios:~/projects/devops_with_docker/exercises/task_1.14]1;..ses/task_1.14]7;file://dainstudios/home/shalltear/projects/devops_with_docker/exercises/task_1.14[0m[27m[24m[J[32mshalltear@dainstudios: [00m[34m/home/shalltear/projects/devops_with_docker/exercises/task_1.14 [00m[01;34mgit:([31mmaster[34m) [33m✗[00m[00m[01;34m [00m
+[01;32m➜  [00m [K[?1h=[?2004hscript taks_1_14.txt[20Dls                  [18Dsudo docker stop 62ps -a  [17Dls               [15Drm task_1_14.txt[16Dcat task_1_14.txt[17Dls               [15Dcatexitgit statusadd . statuscommit -m "modified task12 and task13 dockerfile. Solved task 14"[65Dadd .                                                            [60Dstatus[10Dca[2Ctask_1_14.txt[17Dls               [15Dexitsudo docker run --rm -it -p 5000:5000 task12 & sudo docker run --rm -it -p 8080:8080 task13[79Dbuild -t frontend -f dockerfile_front . && sudo docker build -t backend -f dockerfile_back .[?1l>[?2004l
+]2;sudo docker build -t frontend -f dockerfile_front . && sudo docker build -t  ]1;docker[sudo] password for shalltear: 
+DEPRECATED: The legacy builder is deprecated and will be removed in a future release.
+            Install the buildx component to build images with BuildKit:
+            https://docs.docker.com/go/buildx/
+
+Sending build context to Docker daemon  557.1kBSending build context to Docker daemon  777.2kB
+Step 1/8 : FROM ubuntu:latest
+ ---> 08d22c0ceb15
+Step 2/8 : RUN apt update &&     apt -y install curl &&     curl -sL https://deb.nodesource.com/setup_16.x -o /tmp/nodesource_setup.sh &&     bash /tmp/nodesource_setup.sh &&     apt install nodejs -y
+ ---> Using cache
+ ---> a61e5a735f58
+Step 3/8 : EXPOSE 5000
+ ---> Using cache
+ ---> 65d023f10468
+Step 4/8 : WORKDIR /usr/app
+ ---> Using cache
+ ---> f752556bcb9c
+Step 5/8 : COPY ./example-frontend /usr/app
+ ---> Using cache
+ ---> b0d859da1416
+Step 6/8 : ENV REACT_APP_BACKEND_URL="http://localhost:8080"
+ ---> Using cache
+ ---> b6cef34b281b
+Step 7/8 : RUN npm install &&     npm run build &&     npm install -g serve
+ ---> Using cache
+ ---> 6ae83fd2cf6c
+Step 8/8 : CMD ["serve", "-s", "-l", "5000", "build"]
+ ---> Using cache
+ ---> 18a40ba59ad8
+Successfully built 18a40ba59ad8
+Successfully tagged frontend:latest
+DEPRECATED: The legacy builder is deprecated and will be removed in a future release.
+            Install the buildx component to build images with BuildKit:
+            https://docs.docker.com/go/buildx/
+
+Sending build context to Docker daemon  557.1kBSending build context to Docker daemon  777.2kB
+Step 1/8 : FROM golang:1.16
+ ---> 972d8c0bc0fc
+Step 2/8 : EXPOSE 8080
+ ---> Using cache
+ ---> 382f08e5c56a
+Step 3/8 : WORKDIR /usr/src/app
+ ---> Using cache
+ ---> 0acc215efac3
+Step 4/8 : COPY ./example-backend /usr/src/app
+ ---> Using cache
+ ---> 3431c8930729
+Step 5/8 : RUN go build
+ ---> Using cache
+ ---> bed3c024dbe5
+Step 6/8 : RUN test ./...
+ ---> Using cache
+ ---> 672842a61cbb
+Step 7/8 : ENV REQUEST_ORIGIN="http://localhost:5000"
+ ---> Using cache
+ ---> cbd02f9b7d3d
+Step 8/8 : CMD ["./server"]
+ ---> Using cache
+ ---> 872c67994844
+Successfully built 872c67994844
+Successfully tagged backend:latest
+[1m[7m%[27m[1m[0m                                                                                                                                                                                             ]2;shalltear@dainstudios:~/projects/devops_with_docker/exercises/task_1.14]1;..ses/task_1.14]7;file://dainstudios/home/shalltear/projects/devops_with_docker/exercises/task_1.14[0m[27m[24m[J[32mshalltear@dainstudios: [00m[34m/home/shalltear/projects/devops_with_docker/exercises/task_1.14 [00m[01;34mgit:([31mmaster[34m) [33m✗[00m[00m[01;34m [00m
+[01;32m➜  [00m [K[?1h=[?2004hsudo docker build -t frontend -f dockerfile_front . && sudo docker build -t backend -f dockerfile_back .[104Dscript taks_1_14.tx[2C                                                                                   [84D[20Dls                  [18Dsudo docker stop 62ps -a  [17Dls               [15Drm task_1_14.txt[16Dcat task_1_14.txt[17Dls               [15Dcatexitgit statusadd . statuscommit -m "modified task12 and task13 dockerfile. Solved task 14"[65Dadd .                                                            [60Dstatus[10Dca[2Ctask_1_14.txt[17Dls               [15Dexitsudo docker run --rm -it -p 5000:5000 task12 & sudo docker run --rm -it -p 8080:8080 task13[?1l>[?2004l
+]2;sudo docker run --rm -it -p 5000:5000 task12 & sudo docker run --rm -it -p  ]1;docker[1] 909052
+[1]  + 909052 suspended (tty output)  sudo docker run --rm -it -p 5000:5000 task12
+[Ex 2.4+] REDIS_HOST env was not passed so redis connection is not initialized
+[Ex 2.6+] POSTGRES_HOST env was not passed so postgres connection is not initialized
+[GIN-debug] [WARNING] Creating an Engine instance with the Logger and Recovery middleware already attached.
+
+[GIN-debug] [WARNING] Running in "debug" mode. Switch to "release" mode in production.
+ - using env:	export GIN_MODE=release
+ - using code:	gin.SetMode(gin.ReleaseMode)
+
+[GIN-debug] GET    /ping                     --> server/router.pingpong (4 handlers)
+[GIN-debug] GET    /messages                 --> server/controller.GetMessages (4 handlers)
+[GIN-debug] POST   /messages                 --> server/controller.CreateMessage (4 handlers)
+[GIN-debug] Listening and serving HTTP on :8080
+[GIN] 2023/05/01 - 19:44:51 |[97;42m 200 [0m|       91.74µs |      172.17.0.1 |[97;44m GET     [0m "/ping"
+^C[1m[7m%[27m[1m[0m                                                                                                                                                                                             ]2;shalltear@dainstudios:~/projects/devops_with_docker/exercises/task_1.14]1;..ses/task_1.14]7;file://dainstudios/home/shalltear/projects/devops_with_docker/exercises/task_1.14[0m[27m[24m[J[32mshalltear@dainstudios: [00m[34m/home/shalltear/projects/devops_with_docker/exercises/task_1.14 [00m[01;34mgit:([31mmaster[34m) [33m✗[00m[00m[01;34m [00m
+[01;31m➜ [27m [00m [K[?1h=[?2004hssudo docker ps -a[?1l>[?2004l
+]2;sudo docker ps -a]1;dockerCONTAINER ID   IMAGE                                      COMMAND                  CREATED          STATUS                     PORTS                                       NAMES
+72aeeada63b0   task12                                     "serve -s -l 5000 bu…"   14 seconds ago   Up 13 seconds              0.0.0.0:5000->5000/tcp, :::5000->5000/tcp   serene_brown
+d0ebf7b11d2c   b0d859da1416                               "/bin/sh -c 'npm ins…"   7 hours ago      Exited (1) 7 hours ago                                                 charming_raman
+7856a052c3f9   38241e9c16a1                               "/bin/sh -c 'npm ins…"   7 hours ago      Exited (254) 7 hours ago                                               flamboyant_fermat
+c9bbc61f9fb7   e41b824737e7                               "/bin/sh -c 'npm ins…"   7 hours ago      Exited (1) 7 hours ago                                                 youthful_swirles
+c3dbcadd0076   fb1ced153b29                               "/bin/sh -c 'npm ins…"   7 hours ago      Exited (1) 7 hours ago                                                 nervous_mcclintock
+58642c40a355   f394254e55bb                               "/bin/sh -c 'npm ins…"   7 hours ago      Exited (254) 7 hours ago                                               vigilant_engelbart
+5f334139501e   b7502175dca0                               "/bin/sh -c 'npm ins…"   7 hours ago      Exited (254) 7 hours ago                                               upbeat_ishizaka
+33132c41e6f2   5344c4a05d85                               "/bin/sh -c 'npm ins…"   7 hours ago      Exited (127) 7 hours ago                                               great_sutherland
+e21bff001daa   5344c4a05d85                               "/bin/sh -c 'npm ins…"   2 days ago       Exited (127) 2 days ago                                                confident_rosalind
+a413aabd05e7   old_java                                   "java -jar ./target/…"   5 days ago       Exited (130) 5 days ago                                                kind_margulis
+7eb45b48935c   web-server                                 "/usr/src/app/server…"   7 days ago       Exited (2) 7 days ago                                                  angry_austin
+d327b4e91b0c   devopsdockeruh/simple-web-service:alpine   "/usr/src/app/server"    8 days ago       Exited (2) 8 days ago                                                  heuristic_wiles
+7ec125fefa0c   devopsdockeruh/simple-web-service:alpine   "/usr/src/app/server"    8 days ago       Exited (2) 8 days ago                                                  heuristic_johnson
+6b3484331f64   devopsdockeruh/simple-web-service:alpine   "/usr/src/app/server"    8 days ago       Exited (2) 8 days ago                                                  wizardly_agnesi
+b9c1bfc5dc32   devopsdockeruh/simple-web-service:alpine   "/usr/src/app/server"    8 days ago       Exited (2) 8 days ago                                                  clever_dhawan
+[1m[7m%[27m[1m[0m                                                                                                                                                                                             ]2;shalltear@dainstudios:~/projects/devops_with_docker/exercises/task_1.14]1;..ses/task_1.14]7;file://dainstudios/home/shalltear/projects/devops_with_docker/exercises/task_1.14[0m[27m[24m[J[32mshalltear@dainstudios: [00m[34m/home/shalltear/projects/devops_with_docker/exercises/task_1.14 [00m[01;34mgit:([31mmaster[34m) [33m✗[00m[00m[01;34m [00m
+[01;32m➜  [00m [K[?1h=[?2004hssudo docker stop 72[?1l>[?2004l
+]2;sudo docker stop 72]1;docker72
+[1m[7m%[27m[1m[0m                                                                                                                                                                                             ]2;shalltear@dainstudios:~/projects/devops_with_docker/exercises/task_1.14]1;..ses/task_1.14]7;file://dainstudios/home/shalltear/projects/devops_with_docker/exercises/task_1.14[0m[27m[24m[J[32mshalltear@dainstudios: [00m[34m/home/shalltear/projects/devops_with_docker/exercises/task_1.14 [00m[01;34mgit:([31mmaster[34m) [33m✗[00m[00m[01;34m [00m
+[01;32m➜  [00m [K[?1h=[?2004heexit[?1l>[?2004l
+]2;exit]1;exitzsh: you have suspended jobs.
+[1m[7m%[27m[1m[0m                                                                                                                                                                                             ]2;shalltear@dainstudios:~/projects/devops_with_docker/exercises/task_1.14]1;..ses/task_1.14]7;file://dainstudios/home/shalltear/projects/devops_with_docker/exercises/task_1.14[0m[27m[24m[J[32mshalltear@dainstudios: [00m[34m/home/shalltear/projects/devops_with_docker/exercises/task_1.14 [00m[01;34mgit:([31mmaster[34m) [33m✗[00m[00m[01;34m [00m
+[01;32m➜  [00m [K[?1h=[?2004h[?2004l
+[41m[1m ERROR [22m[49m Cannot copy server address to clipboard: Couldn't find the `xsel` binary and fallback didn't work. On Debian/Ubuntu you can install xsel with: sudo apt install xsel.
+[32m[39m
+[32m   ┌────────────────────────────────────────┐[39m
+   [32m│[39m                                        [32m│[39m
+   [32m│[39m   [32mServing![39m                             [32m│[39m
+   [32m│[39m                                        [32m│[39m
+   [32m│[39m   [1m- Local:[22m    http://localhost:5000    [32m│[39m
+   [32m│[39m   [1m- Network:[22m  http://172.17.0.3:5000   [32m│[39m
+   [32m│[39m                                        [32m│[39m
+[32m   └────────────────────────────────────────┘[39m
+[32m[39m
+[44m[1m HTTP [22m[49m [2m5/1/2023 7:44:49 PM[22m [33m172.17.0.1[39m [36mGET /[39m
+[44m[1m HTTP [22m[49m [2m5/1/2023 7:44:49 PM[22m [33m172.17.0.1[39m [32mReturned 304 in 21 ms[39m
+[44m[1m HTTP [22m[49m [2m5/1/2023 7:44:49 PM[22m [33m172.17.0.1[39m [36mGET /static/css/main.eaa5d75e.chunk.css[39m
+[44m[1m HTTP [22m[49m [2m5/1/2023 7:44:49 PM[22m [33m172.17.0.1[39m [32mReturned 304 in 2 ms[39m
+[44m[1m HTTP [22m[49m [2m5/1/2023 7:44:49 PM[22m [33m172.17.0.1[39m [36mGET /static/js/2.43ca3586.chunk.js[39m
+[44m[1m HTTP [22m[49m [2m5/1/2023 7:44:49 PM[22m [33m172.17.0.1[39m [36mGET /static/js/main.bf8c4953.chunk.js[39m
+[44m[1m HTTP [22m[49m [2m5/1/2023 7:44:49 PM[22m [33m172.17.0.1[39m [32mReturned 304 in 3 ms[39m
+[44m[1m HTTP [22m[49m [2m5/1/2023 7:44:49 PM[22m [33m172.17.0.1[39m [32mReturned 304 in 5 ms[39m
+[44m[1m HTTP [22m[49m [2m5/1/2023 7:44:49 PM[22m [33m172.17.0.1[39m [36mGET /static/media/toskalogo.c0f35cf0.svg[39m
+[44m[1m HTTP [22m[49m [2m5/1/2023 7:44:49 PM[22m [33m172.17.0.1[39m [32mReturned 304 in 3 ms[39m
+[44m[1m HTTP [22m[49m [2m5/1/2023 7:44:49 PM[22m [33m172.17.0.1[39m [36mGET /favicon.ico[39m
+[44m[1m HTTP [22m[49m [2m5/1/2023 7:44:49 PM[22m [33m172.17.0.1[39m [32mReturned 304 in 1 ms[39m
+[44m[1m HTTP [22m[49m [2m5/1/2023 7:44:49 PM[22m [33m172.17.0.1[39m [36mGET /manifest.json[39m
+[44m[1m HTTP [22m[49m [2m5/1/2023 7:44:49 PM[22m [33m172.17.0.1[39m [32mReturned 304 in 2 ms[39m
+
+[45m[1m INFO [22m[49m Gracefully shutting down. Please wait...
+
+Script done on 2023-05-01 21:45:13+02:00 [COMMAND_EXIT_CODE="0"]
