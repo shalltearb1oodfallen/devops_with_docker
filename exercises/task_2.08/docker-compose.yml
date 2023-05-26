@@ -4,44 +4,31 @@ services:
     image: postgres:latest
     environment:
       POSTGRES_PASSWORD: password
+      PGDATA: /database
     container_name: db_pgsql
     volumes:
-      - type: bind
-        source: ./database
-        target: /var/lib/postgresql/data
-    networks:
-      - mynetwork
+      - database:/database
 
   redis:
     image: redis
-    networks:
-      - mynetwork
 
   frontend:
     build:
       context: .
       dockerfile: Dockerfile_frontend
-    ports:
-      - 5000:5000
     stdin_open: true
     tty: true
-    networks:
-      - mynetwork
 
   backend:
     build:
       context: .
       dockerfile: Dockerfile_backend
-    ports:
-      - 8080:8080
     stdin_open: true
     tty: true
     environment:
       - REDIS_HOST=redis
       - POSTGRES_HOST=pgsql
       - POSTGRES_PASSWORD=password
-    networks:
-      - mynetwork
 
   reverse_proxy:
     image: nginx:latest
@@ -49,9 +36,5 @@ services:
       - ./nginx.conf:/etc/nginx/nginx.conf
     ports:
       - 80:80
-    networks:
-      - mynetwork
-
-networks:
-  mynetwork:
-    driver: bridge
+volumes:
+  database:
