@@ -6,9 +6,7 @@ services:
       POSTGRES_PASSWORD: password
     container_name: db_pgsql
     volumes:
-      - type: bind
-        source: ./database
-        target: /var/lib/postgresql/data
+      - ./database:/var/lib/postgresql/data
 
   redis:
     image: redis
@@ -19,6 +17,8 @@ services:
       dockerfile: Dockerfile_frontend
     stdin_open: true
     tty: true
+    ports:
+      - 5000:5000
 
   backend:
     build:
@@ -30,6 +30,8 @@ services:
       - REDIS_HOST=redis
       - POSTGRES_HOST=pgsql
       - POSTGRES_PASSWORD=password
+    ports:
+     - 8080:8080
 
   reverse_proxy:
     image: nginx:latest
