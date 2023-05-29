@@ -1,0 +1,1 @@
+Small docker-compose to install a data science environment. Python, Julia and R can be used in a jupyterlab notebook environment. In addition a postgres database is running to store data. Finally, a requirement.txt can be stored to install additional packages.
