@@ -1,0 +1,20 @@
+Script started on 2023-05-29 18:47:39+02:00 [TERM="xterm-256color" TTY="/dev/pts/1" COLUMNS="189" LINES="40"]
+[1m[7m%[27m[1m[0m                                                                                                                                                                                             ]2;shalltear@dainstudios:~/projects/devops_with_docker/exercises/task_2.10]1;..ses/task_2.10]7;file://dainstudios/home/shalltear/projects/devops_with_docker/exercises/task_2.10[0m[27m[24m[J[32mshalltear@dainstudios: [00m[34m/home/shalltear/projects/devops_with_docker/exercises/task_2.10 [00m[01;34mgit:([31mmaster[34m) [33m✗[00m[00m[01;34m [00m
+[01;32m➜  [00m [K[?1h=[?2004hscript task_2.10.txt[20Dsudo docker run -it --rm --network host networkstatic/nmap localhost[?1l>[?2004l
+]2;sudo docker run -it --rm --network host networkstatic/nmap localhost]1;docker[sudo] password for shalltear: 
+Starting Nmap 7.92 ( https://nmap.org ) at 2023-05-29 16:47 UTC
+Nmap scan report for localhost (127.0.0.1)
+Host is up (0.0000030s latency).
+Other addresses for localhost (not scanned): ::1
+rDNS record for 127.0.0.1: localhost.localdomain
+Not shown: 997 closed tcp ports (reset)
+PORT    STATE SERVICE
+22/tcp  open  ssh
+80/tcp  open  http
+631/tcp open  ipp
+
+Nmap done: 1 IP address (1 host up) scanned in 0.14 seconds
+[1m[7m%[27m[1m[0m                                                                                                                                                                                             ]2;shalltear@dainstudios:~/projects/devops_with_docker/exercises/task_2.10]1;..ses/task_2.10]7;file://dainstudios/home/shalltear/projects/devops_with_docker/exercises/task_2.10[0m[27m[24m[J[32mshalltear@dainstudios: [00m[34m/home/shalltear/projects/devops_with_docker/exercises/task_2.10 [00m[01;34mgit:([31mmaster[34m) [33m✗[00m[00m[01;34m [00m
+[01;32m➜  [00m [K[?1h=[?2004heexit[?1l>[?2004l
+]2;exit]1;exit
+Script done on 2023-05-29 18:47:48+02:00 [COMMAND_EXIT_CODE="0"]
