@@ -1,3 +1,1 @@
-# material-applications #
-
-This repository contains example applications for the course DevOps with Docker.
+Find the docker push config file [here](https://github.com/shalltearb1oodfallen/devops_with_docker/blob/master/.github/workflows/task_3_01.yml)
