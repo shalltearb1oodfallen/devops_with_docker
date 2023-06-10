@@ -1,0 +1,1 @@
+execute with: docker run -e username=YOUR_USERNAME -e token=YOUR_DOCKERHUB_TOKEN -v /var/run/docker.sock:/var/run/docker.sock task3.4
