@@ -1,0 +1,21 @@
+FROM golang:1.16
+
+EXPOSE 8080
+
+WORKDIR /usr/src/app
+
+COPY ./example-backend /usr/src/app
+
+RUN go build && \
+    test ./... && \
+    useradd -m appuser && \
+    chown appuser . && \
+    apt-get purge -y --auto-remove curl && \
+    rm -rf /var/lib/apt/lists/* && \
+    go clean -modcache -cache
+
+ENV REQUEST_ORIGIN="http://localhost:5000"
+
+USER appuser
+
+CMD ["./server"]
