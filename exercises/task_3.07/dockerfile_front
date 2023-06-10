@@ -1,0 +1,29 @@
+# Build stage
+FROM node:16-alpine AS build-stage
+
+WORKDIR /usr/src/app
+
+COPY ./example-frontend/package.json ./
+COPY ./example-frontend/package-lock.json ./
+
+RUN npm ci --only=production
+
+COPY ./example-frontend ./
+
+RUN npm run build
+
+# Final stage
+FROM node:16-alpine AS final-stage
+
+WORKDIR /usr/app
+
+COPY --from=build-stage /usr/src/app/build ./build
+
+ENV REACT_APP_BACKEND_URL="http://localhost:8080"
+
+RUN adduser -D appuser && \
+    chown -R appuser .
+
+USER appuser
+
+CMD ["npx", "serve", "-s", "-l", "5000", "build"]
