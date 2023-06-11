@@ -39,4 +39,4 @@ jobs:
             cd /home/ubuntu/
             sudo docker stop helsinki || true
             sudo docker rm helsinki || true
-            sudo docker run -d --name helsinki -p 80:80 shalltearb1oodfallen/helsinki:latest
+            sudo docker run -d --name helsinki --pull always -p 80:80 shalltearb1oodfallen/helsinki:latest
