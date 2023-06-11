@@ -1,0 +1,40 @@
+FROM python:3.9-slim-buster as builder
+
+ARG NB_USER=jupyter_user
+ARG NB_UID=1000
+
+RUN apt-get update && apt-get install -y --no-install-recommends \
+    build-essential \
+    libffi-dev \
+    libssl-dev \
+    python3-dev
+
+RUN adduser --disabled-password \
+    --gecos "Default user" \
+    --uid ${NB_UID} \
+    ${NB_USER}
+
+WORKDIR /home/${NB_USER}
+
+RUN pip install --no-cache-dir jupyterlab pandas matplotlib numpy scipy scikit-learn
+
+FROM python:3.9-slim-buster
+
+ARG NB_USER=jupyter_user
+ARG NB_UID=1000
+
+COPY --from=builder /etc/passwd /etc/passwd
+COPY --from=builder /etc/group /etc/group
+COPY --from=builder --chown=${NB_USER}:${NB_USER} /home/${NB_USER} /home/${NB_USER}
+
+USER ${NB_USER}
+
+WORKDIR /home/${NB_USER}
+
+RUN pip install --no-cache-dir jupyterlab
+
+EXPOSE 8888
+
+ENV PATH="/home/${NB_USER}/.local/bin:${PATH}"
+
+CMD ["jupyter", "lab", "--ip=0.0.0.0", "--port=8888", "--no-browser"]
