@@ -27,3 +27,16 @@ jobs:
           context: exercises/task_3.02/
           push: true
           tags: shalltearb1oodfallen/helsinki:latest
+
+      - name: SSH into EC2 instance
+        uses: jakejarvis/ssh-action@master
+        with:
+          host: 3.122.231.179
+          username: ubuntu
+          key: ${{ secrets.AWS_SSH_KEY }}
+          port: 22
+
+          # Commands to run on the remote EC2 instance
+          script: |
+            # Pull the Docker image
+            sudo docker pull shalltearb1oodfallen/helsinki:latest
