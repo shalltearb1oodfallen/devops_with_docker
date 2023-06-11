@@ -25,4 +25,5 @@ jobs:
         uses: docker/build-push-action@v2
         with:
           context: exercises/task_3.02/
+          push: true
           tags: shalltearb1oodfallen/helsinki:latest
